@@ -48,12 +48,29 @@ const Table = () => {
 
   // Function to split collaborators' text into individual parts
   const renderCollaborators = (collaborators) => {
-    const parts = collaborators.split(" "); // Split the string by spaces
-    return parts.map((part, index) => (
-      <span key={index} className="collaborator-highlight">
-        {part}
-      </span>
-    ));
+    // Special case for "DR KHAN" to keep it as one unit
+    const parts = collaborators.split(" ");
+    let formattedParts = [];
+
+    for (let i = 0; i < parts.length; i++) {
+      // Check if it's "DR KHAN" and don't split it
+      if (parts[i] === "DR" && parts[i + 1] === "KHAN") {
+        formattedParts.push(
+          <span key={i + "-DR-KHAN"} className="collaborator-highlight">
+            {parts[i]} {parts[i + 1]}
+          </span>
+        );
+        i++; // Skip the next part (KHAN)
+      } else {
+        formattedParts.push(
+          <span key={i} className="collaborator-highlight">
+            {parts[i]}
+          </span>
+        );
+      }
+    }
+
+    return formattedParts;
   };
 
   return (
