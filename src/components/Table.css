@@ -1,0 +1,74 @@
+/* General table container styles */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  }
+  
+  /* Custom table styling */
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  /* Header row styles */
+  .custom-table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+  }
+  
+  /* Even row styling */
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Row hover effect */
+  .custom-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Status box styles */
+  .status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .status.ready {
+    background-color: #abcfeb; /* Green */
+  }
+  
+  .status.recording {
+    background-color: #bc7676; /* Orange */
+  }
+  
+  .status.in-progress {
+    background-color: #ced3a0; /* Blue */
+  }
+  
+  .status.not-started {
+    background-color: #e6e2e2; /* Red */
+  }
+  
+  /* Delete icon styles */
+  .delete-icon {
+    color: #f44336; /* Red */
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
