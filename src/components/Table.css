@@ -65,9 +65,20 @@
     background-color: #e6e2e2; /* Red */
   }
   
+  /* Collaborators styles */
+  .collaborator-highlight {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 2px 6px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
   /* Delete icon styles */
   .delete-icon {
-    color: #f44336; /* Red */
+    color: #111010; /* Red */
     cursor: pointer;
     font-size: 16px;
   }

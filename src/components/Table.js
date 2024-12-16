@@ -14,7 +14,7 @@ const Table = () => {
       name: "John Smith",
       date: "Wed, Oct 9 2024, 10:36 AM",
       status: "Recording",
-      collaborators: "DR KHAN HG HK +1",
+      collaborators: "DR KHAN HG EH-45 HG",
     },
     {
       name: "John Smith",
@@ -46,6 +46,16 @@ const Table = () => {
     }
   };
 
+  // Function to split collaborators' text into individual parts
+  const renderCollaborators = (collaborators) => {
+    const parts = collaborators.split(" "); // Split the string by spaces
+    return parts.map((part, index) => (
+      <span key={index} className="collaborator-highlight">
+        {part}
+      </span>
+    ));
+  };
+
   return (
     <div className="table-container">
       <table className="custom-table">
@@ -66,9 +76,12 @@ const Table = () => {
               <td>
                 <span className={getStatusClass(row.status)}>{row.status}</span>
               </td>
-              <td>{row.collaborators}</td>
+              <td>{renderCollaborators(row.collaborators)}</td>
               <td>
-                <FaTrash className="delete-icon" onClick={() => alert('Delete action triggered')} />
+                <FaTrash
+                  className="delete-icon"
+                  onClick={() => alert("Delete action triggered")}
+                />
               </td>
             </tr>
           ))}
