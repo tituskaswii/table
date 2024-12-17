@@ -3,88 +3,150 @@
   width: 100%;
   overflow-x: auto;
   margin: 20px 0;
-  border: 1px solid #e0e0e0;
   border-radius: 8px;
 }
 
 /* Custom table styling */
 .custom-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate; /* Separate borders for styling */
+  border-spacing: 0 8px; /* Horizontal spacing between rows */
   font-family: 'Arial', sans-serif;
   font-size: 14px;
   text-align: left;
 }
 
-.custom-table th,
-.custom-table td {
-  padding: 12px 15px;
-  border: 1px solid #e0e0e0;
-}
-
-/* Header row styles */
+/* Table headers */
 .custom-table th {
   background-color: #f8f8f8;
   font-weight: bold;
+  padding: 12px 15px;
+  text-align: left;
 }
 
-/* Even row styling */
-.custom-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+/* Table rows */
+.custom-table tr {
+  background-color: #ffffff; /* White background for each row */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
 }
 
-/* Row hover effect */
-.custom-table tbody tr:hover {
-  background-color: #f1f1f1;
-  cursor: pointer;
+/* Table cells */
+.custom-table td {
+  padding: 12px 15px;
+  border: none; /* Remove borders */
+}
+
+/* PATIENT'S NAME field */
+.custom-table .patient-name {
+  width: 332px;
+  height: 64px;
+  padding: 0 24px;
+  gap: 8px;
+}
+
+/* ENCOUNTERS DATE field */
+.custom-table .encounter-date {
+  width: 284px;
+  height: auto; /* Hug content */
+  gap: 8px;
+}
+
+/* STATUS field */
+.custom-table .status-container {
+  width: 160px;
+  height: 64px;
+  padding: 0 24px;
+  gap: 8px;
+}
+
+/* Collaborators styles */
+.collaborators {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Allow content to wrap onto the next line */
+  gap: 4px; /* Spacing between collaborators */
+  width: 100%; /* Take full width */
+  align-items: center; /* Vertically align content */
+}
+
+/* Individual collaborator highlight */
+.collaborator-highlight {
+  display: inline-block;
+  margin-right: 0; /* Remove the fixed margin */
+  padding: 2px 6px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping inside each collaborator */
+}
+
+.collaborator-highlight:hover {
+  background-color: #4c42d6; /* Light Blue */
+  color: #fff;
+}
+
+/* ACTIONS field */
+.custom-table .actions {
+  width: 108px;
+  height: 64px;
+  padding: 0 24px;
+  gap: 8px;
 }
 
 /* Status box styles */
 .status {
   display: inline-block;
   padding: 4px 10px;
-  border-radius: 20px;
+  border: 0.5px;
+  border-radius: 6px;
   font-size: 12px;
-  font-weight: bold;
-  color: #fff;
+  font-style: SF Pro;
+  color: #1C2C62;
 }
 
 .status.ready {
-  background-color: #abcfeb; /* Green */
+  background-color: #d2e3f0; /* Blue */
 }
 
 .status.recording {
-  background-color: #bc7676; /* Orange */
+  background-color: #f58282; /* Orange */
 }
 
 .status.in-progress {
-  background-color: #ced3a0; /* Blue */
+  background-color: #e5ce9e; /* Yellow */
 }
 
 .status.not-started {
-  background-color: #e6e2e2; /* Red */
+  background-color: #e6e2e2; /* Gray */
 }
 
 /* Collaborators styles */
 .collaborator-highlight {
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 4px;
   padding: 2px 6px;
   background-color: #e0e0e0;
-  border-radius: 4px;
+  border-radius: 20px;
   font-size: 12px;
-  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-/* Blue highlight on hover */
 .collaborator-highlight:hover {
-  background-color: #4842f5; /* Light Blue */
+  background-color: #170cb5; /* Light Blue */
+  color: #fff;
 }
 
 /* Delete icon styles */
 .delete-icon {
-  color: #111010; /* Red */
+  display: inline-flex; /* Aligns SVG nicely */
+  align-items: center; /* Centers SVG vertically */
+  justify-content: center;
+  color: #111010; /* Default color */
   cursor: pointer;
   font-size: 16px;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.delete-icon:hover {
+  color: #d9534f; /* Red color on hover */
 }
