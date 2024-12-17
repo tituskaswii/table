@@ -4,9 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <br/>
 
-<div align="center"><img src="https://i.ibb.co/Js0LNpz/Screen-Shot-2024-12-17-at-11-41-47-AM.png" alt="base" border="0"><p></p></div>
+<div align="center"><img src="https://i.ibb.co/2F4z2PX/final.png" alt="base" border="0"><p></p></div>
 
-<div align="center"><img src="https://i.ibb.co/WxdN1SW/Screen-Shot-2024-12-17-at-11-42-22-AM.png" alt="base" border="0"><p></p></div>
+<div align="center"><img src="https://i.ibb.co/7SGJQy3/resize.png" alt="base" border="0"><p></p></div>
 
 ## Available Scripts
 
