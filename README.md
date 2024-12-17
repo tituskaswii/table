@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <div align="center"><img src="https://i.ibb.co/tYbnwqj/final.png" alt="base" border="0"><p></p></div>
 
-<div align="center"><img src="https://i.ibb.co/TcZX68R/resize.png" alt="base" border="0"><p></p></div>
+<div align="center"><img src="https://i.ibb.co/7jgpdpz/resize-final.png" alt="base" border="0"><p></p></div>
 
 ## Available Scripts
 
